@@ -221,7 +221,7 @@ export default function About() {
               Ready to Build the Future Together?
             </h2>
             <p className="text-xl text-gray-200 mb-10 max-w-2xl mx-auto">
-              Let's create something extraordinary. Get in touch with our team today.
+              Let&apos;s create something extraordinary. Get in touch with our team today.
             </p>
             <Link
               href="/contact"

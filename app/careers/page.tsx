@@ -28,7 +28,7 @@ export default function Careers() {
           transition={{ delay: 0.1 }}
           className="text-xl text-blue-200 mb-16 max-w-3xl"
         >
-          Join a team that's passionate about building enterprise-grade software solutions
+          Join a team that&apos;s passionate about building enterprise-grade software solutions
           that make a real impact.
         </motion.p>
 
@@ -100,7 +100,7 @@ export default function Careers() {
             Ready to Join Our Team?
           </h2>
           <p className="text-xl text-blue-300 mb-8 max-w-2xl mx-auto">
-            We're always looking for talented individuals who are passionate about
+            We&apos;re always looking for talented individuals who are passionate about
             building exceptional software.
           </p>
           <Link

@@ -244,7 +244,7 @@ export default function Products() {
               Have an Idea for a Product?
             </h2>
             <p className="text-xl text-gray-200 mb-10 max-w-2xl mx-auto">
-              We'd love to hear about your vision and help bring it to life with our expertise and technology.
+              We&apos;d love to hear about your vision and help bring it to life with our expertise and technology.
             </p>
             <Link
               href="/contact"

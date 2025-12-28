@@ -37,10 +37,10 @@ export default function Contact() {
           className="text-center mb-20"
         >
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-[#162659] to-[#0D47A1] bg-clip-text text-transparent">
-            Let's Build Together
+            Let&apos;s Build Together
           </h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto" style={{ color: 'var(--color-text-secondary)' }}>
-            Have a project in mind? We'd love to hear from you. Get in touch and we'll respond as soon as possible.
+            Have a project in mind? We&apos;d love to hear from you. Get in touch and we&apos;ll respond as soon as possible.
           </p>
         </motion.div>
 
@@ -210,7 +210,7 @@ export default function Contact() {
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/90 to-blue-900/40" />
                 <div className="absolute bottom-0 left-0 right-0 p-8">
                   <h3 className="text-2xl font-bold text-white mb-2">Get In Touch</h3>
-                  <p className="text-gray-200">We're here to help you succeed</p>
+                  <p className="text-gray-200">We&apos;re here to help you succeed</p>
                 </div>
               </div>
 
@@ -249,7 +249,7 @@ export default function Contact() {
                   Ready to Start Your Project?
                 </h3>
                 <p className="text-gray-200">
-                  Whether you need enterprise software, healthcare systems, or cloud solutions, we're here to help bring your vision to life.
+                  Whether you need enterprise software, healthcare systems, or cloud solutions, we&apos;re here to help bring your vision to life.
                 </p>
               </div>
             </div>

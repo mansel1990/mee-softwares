@@ -225,7 +225,7 @@ export default function Services() {
 
           <div className="relative z-10 p-16 text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Let's Build Something Amazing
+              Let&apos;s Build Something Amazing
             </h2>
             <p className="text-xl text-gray-200 mb-10 max-w-2xl mx-auto">
               Transform your business with custom software solutions tailored to your unique needs.

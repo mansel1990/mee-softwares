@@ -275,7 +275,7 @@ export default function Home() {
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-200 mb-10 max-w-2xl mx-auto">
-                Let's build something extraordinary together. Get in touch with our team today.
+                Let&apos;s build something extraordinary together. Get in touch with our team today.
               </p>
               <Link
                 href="/contact"
