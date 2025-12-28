@@ -1,26 +1,160 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Light Mode - White background with Deep Blue (almost black) text */
+  --color-bg-primary: #FFFFFF;
+  --color-bg-secondary: #F8F9FA;
+  --color-bg-tertiary: #E9ECEF;
+
+  --color-deep-blue: #0A1929;
+  --color-royal-blue: #0D47A1;
+  --color-bright-blue: #1565C0;
+  --color-sky-blue: #1976D2;
+
+  --color-text-primary: #0A1929;
+  --color-text-secondary: #1E3A5F;
+  --color-text-muted: #37474F;
+
+  --color-border: #E2E8F0;
+  --color-border-hover: #CBD5E1;
+
+  /* Gradient colors for headings and brand */
+  --gradient-heading-from: #162659;
+  --gradient-heading-to: #0D47A1;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  /* Dark Mode - Black background with Bright Whiteish text */
+  --color-bg-primary: #000000;
+  --color-bg-secondary: #0A0A0A;
+  --color-bg-tertiary: #1A1A1A;
+
+  --color-deep-blue: #0D47A1;
+  --color-royal-blue: #1976D2;
+  --color-bright-blue: #2196F3;
+  --color-sky-blue: #42A5F5;
+
+  --color-text-primary: #F5F5F5;
+  --color-text-secondary: #E0E0E0;
+  --color-text-muted: #BDBDBD;
+
+  --color-border: #1E293B;
+  --color-border-hover: #334155;
+
+  /* Gradient colors for headings and brand - lighter in dark mode */
+  --gradient-heading-from: #2196F3;
+  --gradient-heading-to: #42A5F5;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  transition: background-color var(--transition-normal),
+              border-color var(--transition-normal),
+              color var(--transition-normal),
+              opacity var(--transition-normal);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  position: relative;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Subtle pattern for light mode */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(90deg, rgba(37, 99, 235, 0.02) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(37, 99, 235, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 1;
+}
+
+.dark body::before {
+  background-image:
+    linear-gradient(90deg, rgba(59, 130, 246, 0.05) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
+}
+
+/* Blue glow effect utility */
+.blue-glow {
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
+}
+
+.blue-glow-strong {
+  box-shadow: 0 0 30px rgba(37, 99, 235, 0.5);
+}
+
+.dark .blue-glow {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+}
+
+.dark .blue-glow-strong {
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.6);
+}
+
+/* Curved Section Divider */
+.section-divider {
+  width: 100%;
+  height: 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-divider svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.section-divider path {
+  fill: var(--color-bg-secondary);
+  transition: fill 0.3s ease;
+}
+
+/* Gradient heading utility class */
+.gradient-heading {
+  background: linear-gradient(to right, var(--gradient-heading-from), var(--gradient-heading-to));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-royal-blue);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-bright-blue);
 }
